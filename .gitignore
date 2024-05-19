@@ -8,6 +8,7 @@
 !*/
 .cache
 !.config/awesome/*
+!.config/awesome/themes/powerarrow-dark/**/*
 !.config/kitty/*
 !.config/fish/*
 
