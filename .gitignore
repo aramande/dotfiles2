@@ -1,0 +1,18 @@
+# Ignore Everything
+*
+
+# Except these
+!.gitignore
+!.Xresources
+
+!*/
+.cache
+!.config/awesome/*
+!.config/kitty/*
+!.config/fish/*
+
+!*/*/
+!.local/share/icons/*
+!.local/share/fonts/*
+!.local/share/fonts/nerd-fonts/*
+.local/share/omf
