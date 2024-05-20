@@ -274,7 +274,16 @@ function theme.at_screen_connect(s)
     s.quake = lain.util.quake({ app = awful.util.terminal })
 
     -- Tags
-    awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
+    if s.index == 1 then
+      awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
+    elseif s.index == 2 then
+      awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
+    elseif s.index == 3 then
+      awful.tag(awful.util.tagnames, s, awful.layout.layouts[3])
+    elseif s.index == 4 then
+      awful.tag(awful.util.tagnames, s, awful.layout.layouts[2])
+    end
+
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
