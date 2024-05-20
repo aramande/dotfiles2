@@ -821,9 +821,6 @@ tag.connect_signal("property::selected", backham)
 
 -- }}}
 
-beautiful.useless_gap = 5
-beautiful.gap_single_client=false
-
 -- Startup scripts on awesomewm reload
 awful.spawn(terminal.." -e setup_nitrogen")
 
