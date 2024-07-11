@@ -226,33 +226,12 @@ local bat = lain.widget.bat({
     end
 })
 
--- ALSA volume
+-- PulseAudio/Pipewire volume
 local volicon = wibox.widget.imagebox(theme.widget_vol)
-theme.volume = lain.widget.alsa({
-    settings = function()
-        if volume_now.status == "off" then
-            volicon:set_image(theme.widget_vol_mute)
-        elseif tonumber(volume_now.level) == 0 then
-            volicon:set_image(theme.widget_vol_no)
-        elseif tonumber(volume_now.level) <= 50 then
-            volicon:set_image(theme.widget_vol_low)
-        else
-            volicon:set_image(theme.widget_vol)
-        end
-
-        widget:set_markup(markup.font(theme.font, " " .. volume_now.level .. "% "))
-    end
+local new_volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
+theme.volume = new_volume_widget({
+  widget_type='horizontal_bar'
 })
-theme.volume.widget:buttons(awful.util.table.join(
-                               awful.button({}, 4, function ()
-                                     awful.util.spawn("amixer set Master 1%+")
-                                     theme.volume.update()
-                               end),
-                               awful.button({}, 5, function ()
-                                     awful.util.spawn("amixer set Master 1%-")
-                                     theme.volume.update()
-                               end)
-))
 
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
@@ -320,12 +299,13 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.container.background(wibox.widget.systray(), theme.bg_focus),
-	    spr,
+	          spr,
             arrl_ld,
             wibox.container.background(keyboardlayout, theme.bg_focus),
             arrl_dl,
             volicon,
-            theme.volume.widget,
+            theme.volume,
+            spr,
             arrl_ld,
             wibox.container.background(memicon, theme.bg_focus),
             wibox.container.background(mem.widget, theme.bg_focus),
