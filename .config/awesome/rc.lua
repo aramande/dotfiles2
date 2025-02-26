@@ -533,9 +533,13 @@ globalkeys = mytable.join(
               {description = "run remote desktop", group = "launcher"}),
 
     awful.key({ modkey }, "9", function () awful.spawn("flameshot gui") end,
-              {description = "run remote desktop", group = "launcher"}),
+              {description = "screenshot customize", group = "command"}),
     awful.key({ modkey }, "0", function () awful.spawn("flameshot screen") end,
-              {description = "run remote desktop", group = "launcher"}),
+              {description = "screenshot everything", group = "command"}),
+    awful.key({ modkey }, "t", function () awful.spawn("openrgb -p Off") end,
+              {description = "turn off lights", group = "command"}),
+    awful.key({ modkey }, "n", function () awful.spawn("openrgb -p Purple") end,
+              {description = "turn off lights", group = "command"}),
 
     
 
@@ -572,13 +576,13 @@ clientkeys = mytable.join(
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "w",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "t",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
+    -- awful.key({ modkey,           }, "t",
+    --     function (c)
+    --         -- The client currently has the input focus, so it cannot be
+    --         -- minimized, since minimized clients can't have the focus.
+    --         c.minimized = true
+    --     end ,
+    --     {description = "minimize", group = "client"}),
     awful.key({ modkey,           }, "c",
         function (c)
             c.maximized = not c.maximized
@@ -730,14 +734,14 @@ awful.rules.rules = {
           "TelegramDesktop"
         } 
       },
-      properties = { screen = 4, tag = "1" }
+      properties = { screen = 3, tag = "1" }
     },
     { rule_any = { 
         class = {
           "Proton Mail",
         } 
       },
-      properties = { screen = 4, tag = "2" }
+      properties = { screen = 3, tag = "2" }
     },
     { rule = { class = "org.remmina.Remmina" }, properties = {screen = 1}}
 }

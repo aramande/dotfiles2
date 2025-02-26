@@ -106,7 +106,7 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        font = "Terminus 9",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -174,7 +174,7 @@ local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
     settings = function()
         widget:set_markup(markup.font(theme.font, " " .. mem_now.used .. "MB "))
-    end
+  end
 })
 
 -- CPU
@@ -186,10 +186,16 @@ local cpu = lain.widget.cpu({
 })
 
 -- Coretemp
+-- local coretemp_now = cat /sys/class/hwmon/hwmon3/temp1_input | awk '{print $1/1000}'
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
-local temp = lain.widget.temp({
+ local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
+      local coretemp = [[cat /sys/class/hwmon/hwmon3/temp1_input]]
+      awful.spawn.with_line_callback(coretemp, {
+        stdout = function(temp)
+          widget:set_markup(markup.font(theme.font, " " .. math.floor(temp/1000) .. "°C "))
+        end
+      })
     end
 })
 
@@ -259,9 +265,9 @@ function theme.at_screen_connect(s)
     elseif s.index == 2 then
       awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
     elseif s.index == 3 then
-      awful.tag(awful.util.tagnames, s, awful.layout.layouts[3])
-    elseif s.index == 4 then
       awful.tag(awful.util.tagnames, s, awful.layout.layouts[2])
+    elseif s.index == 4 then
+      awful.tag(awful.util.tagnames, s, awful.layout.layouts[3])
     end
 
 

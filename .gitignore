@@ -1,5 +1,7 @@
 # Ignore Everything
 *
+src
+go
 
 # Except these
 !.gitignore
@@ -17,3 +19,4 @@
 !.local/share/fonts/*
 !.local/share/fonts/nerd-fonts/*
 .local/share/omf
+.local/share/steam
