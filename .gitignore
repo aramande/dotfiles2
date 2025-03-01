@@ -1,22 +1,16 @@
 # Ignore Everything
 *
-src
-go
 
 # Except these
 !.gitignore
 !.Xresources
 
-!*/
-.cache
 !.config/awesome/*
 !.config/awesome/themes/powerarrow-dark/**/*
 !.config/kitty/*
 !.config/fish/*
 
-!*/*/
 !.local/share/icons/*
 !.local/share/fonts/*
 !.local/share/fonts/nerd-fonts/*
-.local/share/omf
-.local/share/steam
+

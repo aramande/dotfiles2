@@ -236,7 +236,8 @@ local bat = lain.widget.bat({
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 local new_volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 theme.volume = new_volume_widget({
-  widget_type='horizontal_bar'
+  widget_type='horizontal_bar',
+  tooltip=true
 })
 
 -- Net
