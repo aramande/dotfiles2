@@ -236,7 +236,9 @@ local bat = lain.widget.bat({
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 local new_volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 theme.volume = new_volume_widget({
-  widget_type='horizontal_bar',
+  widget_type='arc',
+  main_color='#ffffffcc',
+  bg_color='#00aaaa55',
   tooltip=true
 })
 
@@ -310,7 +312,6 @@ function theme.at_screen_connect(s)
             arrl_ld,
             wibox.container.background(keyboardlayout, theme.bg_focus),
             arrl_dl,
-            volicon,
             theme.volume,
             spr,
             arrl_ld,
