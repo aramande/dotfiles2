@@ -277,10 +277,10 @@ globalkeys = mytable.join(
               {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
-              {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+--    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+--              {description = "view  previous nonempty", group = "tag"}),
+--    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
+--              {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
@@ -743,7 +743,6 @@ awful.rules.rules = {
       },
       properties = { screen = 3, tag = "2" }
     },
-    { rule = { class = "org.remmina.Remmina" }, properties = {screen = 1}}
 }
 
 -- }}}

@@ -242,6 +242,11 @@ theme.volume = new_volume_widget({
   tooltip=true
 })
 
+-- Pacman
+local pacman_widget = require('awesome-wm-widgets.pacman-widget.pacman')
+local pacman = pacman_widget()
+
+
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
 local net = lain.widget.net({
@@ -313,6 +318,8 @@ function theme.at_screen_connect(s)
             wibox.container.background(keyboardlayout, theme.bg_focus),
             arrl_dl,
             theme.volume,
+            spr,
+            pacman,
             spr,
             arrl_ld,
             wibox.container.background(memicon, theme.bg_focus),
