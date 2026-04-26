@@ -1,0 +1,8 @@
+{
+  "catppuccin": { "branch": "main", "commit": "426dbebe06b5c69fd846ceb17b42e12f890aedf1" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "neoconf.nvim": { "branch": "main", "commit": "314baf12e4e39dcdfffb0f75d09f56dafb621591" },
+  "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
+  "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
+  "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
+}

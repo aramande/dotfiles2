@@ -1,0 +1,94 @@
+@import "colors/catppuccin.css";
+
+* {
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+    background: transparent;
+    font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo";
+    font-size: 13px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    color: @text;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: @surface0;
+    border: 1px solid @crust;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 6px;
+}
+
+#workspaces {
+    background: @surface0;
+    padding: 3px 5px;
+    margin: 0 0 0 12px;
+    border-radius: 18px;
+/*    border: 1px solid @surface1;*/
+    color: @text;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 50px;
+    padding: 0px 2px;
+}
+
+#workspaces button.active {
+    color: @sky;
+}
+
+#workspaces button:hover {
+    color: @surface0;
+    background: @blue;
+}
+
+
+#idle_inhibitor,
+#pulseaudio,
+#cpu,
+#memory,
+#clock,
+#tray,
+#custom-notification{
+    background: @surface0;
+    padding: 0 15px 0 15px;
+}
+
+#idle_inhibitor{
+    color: @lavender;
+    border-radius: 18px 0px 0px 18px;
+}
+#pulseaudio{
+    color: @maroon;
+}
+#cpu{
+    color: @flamingo;
+}
+#memory{
+    color: @peach;
+}
+#clock{
+    color: @blue;
+    margin-right: 12px;
+    border-radius: 0px 18px 18px 0px;
+}
+#tray{
+    margin-left: 12px;
+    border-radius: 18px 0px 0px 18px;
+}
+#custom-notification{
+    margin-right: 12px;
+    border-radius: 0px 18px 18px 0px;
+}
