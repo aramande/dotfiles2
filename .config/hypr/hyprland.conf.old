@@ -175,7 +175,7 @@ animations {
 
 # See https://wiki.hypr.land/Configuring/Dwindle-Layout/ for more
 dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    #pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = true # You probably want this
 }
 
@@ -197,7 +197,7 @@ misc {
 
 # https://wiki.hypr.land/Configuring/Variables/#input
 input {
-    kb_layout = us
+    kb_layout = eu
     kb_variant =
     kb_model =
     kb_options =
@@ -273,4 +273,4 @@ layerrule = ignore_alpha 0.1, match:namespace swaync-control-center
 layerrule = ignore_alpha 0.1, match:namespace swaync-notification-window
 
 # Fixes
-cursor.no_hardware_cursors = 1
+cursor.no_hardware_cursors = true

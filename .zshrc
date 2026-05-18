@@ -126,3 +126,4 @@ alias grep='grep --color=auto'
 alias pac='sudo pacman'
 alias vim='nvim'
 
+export TERM=xterm-256color
