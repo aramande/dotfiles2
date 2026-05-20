@@ -30,3 +30,6 @@ hl.window_rule({
 -- hl.window_rule({ name = "ws-edge", match = { class = "Microsoft-edge" }, workspace = "5 silent" })
 -- hl.window_rule({ name = "ws-thunderbird", match = { class = "org.mozilla.Thunderbird" }, workspace = "6 silent" })
 hl.window_rule({ name = "ws-keepass", match = { class = "org.keepassxc.KeePassXC" }, workspace = "2 silent", monitor = "DP-4" })
+
+hl.layer_rule({ name = "swaync-blur-cc",    match = { namespace = "swaync-control-center" },       blur = true, ignore_alpha = 0.1 })
+hl.layer_rule({ name = "swaync-blur-notif", match = { namespace = "swaync-notification-window" },  blur = true, ignore_alpha = 0.1 })
