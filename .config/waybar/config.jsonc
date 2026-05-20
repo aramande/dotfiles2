@@ -26,9 +26,9 @@
             "default": "", // unfocused workspace with items open
             "empty": "" // persistent (created by this plugin)
         },
-//        "on-click": "hyprctl dispatch require('hyprsplit').dsp.focus({workspace = '+1'})",
-        "on-scroll-up": "hyprctl dispatch require('hyprsplit').dsp.focus({workspace = '-1'})",
-        "on-scroll-down": "hyprctl dispatch require('hyprsplit').dsp.focus({workspace = '+1'})",
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch \"require('hyprsplit').dsp.focus({workspace = '+1'})\"",
+        "on-scroll-down": "hyprctl dispatch \"require('hyprsplit').dsp.focus({workspace = '-1'})\"",
         "all-outputs": false // recommended
     },
     "idle_inhibitor": {
