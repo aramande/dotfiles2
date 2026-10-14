@@ -11,6 +11,9 @@ hl.config({
 			natural_scroll = false,
 			-- tap_button_map = "lmr",
 		},
+		tablet = {
+			output = "DP-3",
+		},
 	},
 
 	general = {
@@ -65,7 +68,12 @@ hl.config({
 	debug = {
 		disable_logs = false,
 	},
+  xwayland = {
+    force_zero_scaling = true,
+  }
 })
+
+hl.device({ name = "wacom-intuos-pro-m-finger", enabled = false })
 
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })

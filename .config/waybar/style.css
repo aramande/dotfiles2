@@ -33,14 +33,16 @@ tooltip label {
     background: @surface0;
     padding: 3px 5px;
     margin: 0 0 0 12px;
+    border-radius: 0 0 18px 18px;
+/*    border: 1px solid @surface1;
     border-radius: 18px;
-/*    border: 1px solid @surface1;*/
+*/
     color: @text;
 }
 
 #workspaces button {
     color: @lavender;
-    border-radius: 50px;
+    border-radius: 50px ;
     padding: 0px 4px;
 }
 
@@ -57,18 +59,23 @@ tooltip label {
 #idle_inhibitor,
 #custom-updates,
 #pulseaudio,
+#clock,
 #cpu,
 #memory,
-#clock,
 #tray,
 #custom-notification{
     background: @surface0;
     padding: 0 15px 0 15px;
 }
+#clock{
+    color: @blue;
+    margin-right: 12px;
+    border-radius: 0px 0 18px 0px;
+}
 
 #idle_inhibitor{
     color: @lavender;
-    border-radius: 18px 0px 0px 18px;
+    border-radius: 0 0px 0px 18px;
 }
 #custom-updates{
     color: @green;
@@ -81,15 +88,11 @@ tooltip label {
 }
 #memory{
     color: @peach;
-}
-#clock{
-    color: @blue;
-    margin-right: 12px;
-    border-radius: 0px 18px 18px 0px;
+    border-radius: 0 0 18px 0;
 }
 #tray{
     margin-left: 12px;
-    border-radius: 18px 0px 0px 18px;
+    border-radius: 0 0px 0px 18px;
 }
 #tray menu{
     background: alpha(@surface0, 0.5);
@@ -102,6 +105,6 @@ tooltip label {
     background: alpha(@overlay0, 0.4);
 }
 #custom-notification{
-    margin-right: 12px;
-    border-radius: 0px 18px 18px 0px;
+/*    margin-right: 12px;
+    border-radius: 0px 0 18px 0px; */
 }

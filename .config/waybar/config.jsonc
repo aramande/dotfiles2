@@ -1,19 +1,21 @@
 // -*- mode: jsonc -*-
 {
     "position": "top",
-    "margin-top": 10,
+    "margin-top": 0,
+    "margin-bottom": 3, 
     "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [],
-    "modules-right": [
+        "clock",
         "idle_inhibitor",
         "custom/updates",
         "pulseaudio",
         "cpu",
         "memory",
         "temperature",
-        "clock",
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
         "tray",
         "custom/notification"
     ],

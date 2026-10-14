@@ -15,6 +15,6 @@ dir="$HOME/.config/rofi/launchers/type-2"
 theme='style-1'
 
 ## Run
-rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi
+# G_MESSAGES_DEBUG=Modes.Run 
+rofi -show drun -theme ${dir}/${theme}.rasi
+# -no-config
